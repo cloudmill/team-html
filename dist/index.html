@@ -5,9 +5,13 @@
 		<meta charset="UTF-8">
 		<title>team</title>
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="address=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
 		<link href="styles.css" rel="stylesheet">
@@ -765,17 +769,17 @@
 				<div class="discuss" data-fancy-modal="discuss">
 					<div class="discuss__container">
 						<h2 class="discuss__title">Обсудить проект</h2>
-						<form class="form form--light" action="/"><label class="form__item">
-								<div class="form__label">Имя</div><input class="form__input" />
-							</label><label class="form__item">
-								<div class="form__label">E-mail</div><input class="form__input" />
-							</label><label class="form__item">
-								<div class="form__label">Телефон</div><input class="form__input" />
-							</label><label class="form__item">
-								<div class="form__label">Сообщение</div><textarea class="form__textarea"></textarea>
+						<form class="form form--light" action="/"><label class="form__item" data-parsley-parent="">
+								<div class="form__label">Имя</div><input class="form__input" required="required" />
+							</label><label class="form__item" data-parsley-parent="">
+								<div class="form__label">E-mail</div><input class="form__input" required="required" />
+							</label><label class="form__item" data-parsley-parent="">
+								<div class="form__label">Телефон</div><input class="form__input" required="required" />
+							</label><label class="form__item" data-parsley-parent="">
+								<div class="form__label">Сообщение</div><textarea class="form__textarea" required="required"></textarea>
 							</label>
 							<div class="form__inner">
-								<div class="checkbox checkbox--dark checkbox--mb"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+								<div class="checkbox checkbox--dark checkbox--mb"><label class="checkbox__label" data-parsley-parent=""><input class="checkbox__input" type="checkbox" id="checkbox1" required="required" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1 3.66268L4.47826 6.85181L11 0.872192" stroke="#0E1010"></path>
 											</svg></div>
@@ -814,17 +818,17 @@
 											</div>
 										</div>
 										<div class="footer__col">
-											<form class="form" action="/"><label class="form__item">
-													<div class="form__label">Имя</div><input class="form__input" />
-												</label><label class="form__item">
-													<div class="form__label">E-mail</div><input class="form__input" />
-												</label><label class="form__item">
-													<div class="form__label">Телефон</div><input class="form__input" />
-												</label><label class="form__item">
-													<div class="form__label">Сообщение</div><textarea class="form__textarea"></textarea>
+											<form class="form" action="/"><label class="form__item" data-parsley-parent="">
+													<div class="form__label">Имя</div><input class="form__input" required="required" />
+												</label><label class="form__item" data-parsley-parent="">
+													<div class="form__label">E-mail</div><input class="form__input" required="required" />
+												</label><label class="form__item" data-parsley-parent="">
+													<div class="form__label">Телефон</div><input class="form__input" required="required" />
+												</label><label class="form__item" data-parsley-parent="">
+													<div class="form__label">Сообщение</div><textarea class="form__textarea" required="required"></textarea>
 												</label>
 												<div class="form__inner">
-													<div class="checkbox checkbox--mb"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox checkbox--mb"><label class="checkbox__label" data-parsley-parent=""><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
 															<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path d="M1 3.66268L4.47826 6.85181L11 0.872192" stroke="#0E1010"></path>
 																</svg></div>
