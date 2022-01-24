@@ -1,0 +1,30 @@
+.row {
+  @media (min-width: $breakpoint) {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &--default {
+    @media (min-width: $breakpoint) {
+      align-items: flex-start;
+    }
+  }
+
+  &__col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 2);
+      }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+      }
+    }
+  }
+}

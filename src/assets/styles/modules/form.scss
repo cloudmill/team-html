@@ -1,0 +1,151 @@
+.form {
+  $comp: &;
+
+  &--light {
+
+    #{$comp}__item {
+      &:focus-within {
+        #{$comp}__label {
+          color: var(--color-focus);
+        }
+        #{$comp}__input {
+          border-color: var(--color-focus);
+        }
+        #{$comp}__textarea {
+          border-color: var(--color-focus);
+        }
+      }
+    }
+
+    #{$comp}__label {
+      color: var(--color-primary);
+    }
+
+    #{$comp}__input {
+      color: var(--color-primary);
+      border-color: var(--color-bg);
+    }
+
+    #{$comp}__textarea {
+      color: var(--color-primary);
+      border-color: var(--color-bg);
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 0;
+
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint) {
+        margin-top: 40px;
+      }
+    }
+
+    &.parsley-error {
+      #{$comp}__label {
+        color: var(--color-red);
+      }
+      #{$comp}__input {
+        border-color: var(--color-red);
+      }
+      #{$comp}__textarea {
+        border-color: var(--color-red);
+      }
+    }
+
+    &:focus-within {
+      #{$comp}__label {
+        color: var(--color-hover);
+      }
+      #{$comp}__input {
+        border-color: var(--color-hover);
+      }
+      #{$comp}__textarea {
+        border-color: var(--color-hover);
+      }
+    }
+  }
+
+  &__label {
+    color: var(--color-secondary);
+    @include fsl(12px, 140%);
+    @media (min-width: $breakpoint) {
+      @include fsl(14px, 140%);
+    }
+    transition: color $transition;
+  }
+
+  &__input {
+    padding: 6px 0;
+    @media (min-width: $breakpoint) {
+      padding: 12px 0;
+    }
+
+    width: 100%;
+
+    color: var(--color-secondary);
+    @include f-main;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    transition: border-color $transition;
+    @include fsl(12px, 140%);
+    @media (min-width: $breakpoint) {
+      @include fsl(14px);
+    }
+  }
+
+  &__textarea {
+    padding: 6px 0;
+    @media (min-width: $breakpoint) {
+      padding: 12px 0;
+    }
+
+    width: 100%;
+    min-height: 60px;
+    @media (min-width: $breakpoint) {
+      min-height: 100px;
+    }
+
+    background: none;
+    border: none;
+    transition: border-color $transition;
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-secondary);
+    resize: none;
+    @include f-main;
+    @include fsl(12px, 140%);
+    @media (min-width: $breakpoint) {
+      @include fsl(14px);
+    }
+  }
+
+  &__inner {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 41px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.parsley-errors-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  @media (min-width: $breakpoint) {
+    top: calc(100% + 8px);
+  }
+
+  li {
+    @include fsl(12px, 120%);
+    color: var(--color-red);
+  }
+}

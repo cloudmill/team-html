@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:active, a:focus {outline: none;}
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+button:active, button:focus {outline: none;}
+:focus {outline:none;}
+button::-moz-focus-inner {border: 0;}
+
+html {
+  font-size: $fs;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  @include f-main();
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  @include fsl(14px, 140%);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 400;
+}
+
+h2 {
+  @include fsl(20px, 120%);
+  @media (min-width: $breakpoint) {
+    @include fsl(30px);
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
