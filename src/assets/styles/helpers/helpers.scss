@@ -44,7 +44,8 @@ $breakpoint-xxl: 1920px;
   --color-focus: #30D0DC;
 }
 
-$transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+$aos-timing-function: cubic-bezier(0, 0, 0.58, 1);
+$transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 $transition-duration: .5s;
 $transition: $transition-duration $transition-timing-function;
 

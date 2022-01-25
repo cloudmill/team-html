@@ -1,0 +1,15 @@
+// custom animation
+
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: $aos-timing-function !important;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+[data-aos-easing="new-easing"] {
+  transition-timing-function: $aos-timing-function !important;
+}

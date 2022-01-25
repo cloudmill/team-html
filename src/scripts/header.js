@@ -1,17 +1,18 @@
 import {mediaQuery} from './mediaQueries'
 
-// scroll
 {
   $(() => {
 
     if (mediaQuery.matches) {
+      // scroll
       const header = $('.header')
-      const headeList = $('.header__list')
-  
+      const headerNav = $('.header__nav')
+      const headerAccordion = $('.header__template')
       const fps = 120
   
       let isScrolled = false
   
+      update()
       $(window).one('scroll', scroll)
   
       function scroll() {
@@ -29,11 +30,7 @@ import {mediaQuery} from './mediaQueries'
   
         if (scrollTop > 1) {
           header.addClass('header--scroll')
-
-          if (!isScrolled) {
-            isScrolled = true
-            headeList.slideUp(500)
-          }
+          isScrolled = true
         } 
   
         if (scrollTop < 1) {
@@ -41,26 +38,26 @@ import {mediaQuery} from './mediaQueries'
 
           if (isScrolled) {
             isScrolled = false
-            headeList.slideDown(500)
-            $('[data-header-button]').removeClass('active')
-            $('.header__template').slideUp(500)
+            headerNav.removeClass('active')
+            headerAccordion.slideUp(500)
           }
         }
       }
-    }
-  });
-}
 
-{
-  $(() => {
-    if (mediaQuery.matches) {
-      const button = $('[data-header-button]')
-      const headerAccordion = $('[data-header-accordion]')
+      // menu
+      headerNav.on('mouseenter', function() {
+        if (isScrolled) {
+          headerAccordion.slideDown(500)
+          headerNav.addClass('active')
+        }
+      })
 
-      button.on('click', function() {
-        $(this).toggleClass('active')
-        headerAccordion.slideToggle(500)
+      headerNav.on('mouseleave', function() {
+        if (isScrolled) {
+          headerAccordion.slideUp(500)
+          headerNav.removeClass('active')
+        }
       })
     }
-  })
+  });
 }

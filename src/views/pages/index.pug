@@ -2,6 +2,15 @@ extends ../layouts/master.pug
 
 include ../components/modals
 
+block loader 
+  .loader 
+    .loader__container 
+      .loader__top 
+        .loader__logo 
+          +logo-svg.loader__svg 
+      .loader__bot 
+        |100
+
 block content 
   -
     var ddata = {
@@ -50,16 +59,19 @@ block content
     }
   section.section.section--first.section--black 
     .container 
-      .hero 
-        .hero__title.hero__inner 
-          |Надежная команда #[br] 
-          .hero__italic [Битрикс/Laravel] #[br] разработчиков на ваш проект
-        .hero__button.hero__inner 
-          a.button(href="#")
-            |Узнать цену
+      .hero
+        .aos-container(data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" data-aos-easing="new-easing")
+          .hero__title.hero__inner 
+            |Надежная команда #[br] 
+            .hero__italic [Битрикс/Laravel] #[br] разработчиков на ваш проект
+          .hero__button.hero__inner 
+            a.button(href="#")
+              |Узнать цену
         .hero__container 
-          img.hero__img(src="assets/images/hero.jpg", alt="")
-          +hero-svg.hero__svg
+          .aos-container(data-aos="new-animation" data-aos-offset='1' data-aos-duration="1200" data-aos-delay="800")
+            img.hero__img(src="assets/images/hero.jpg", alt="")
+          .hero__wrapper(data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" data-aos-easing="new-easing")
+            +hero-svg.hero__svg
   section.section.section--black 
     .container 
       .row.row--default
