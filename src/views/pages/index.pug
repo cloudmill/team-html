@@ -9,7 +9,19 @@ block loader
         .loader__logo 
           +logo-svg.loader__svg 
       .loader__bot 
-        |100
+        ul.loader__list 
+          li.loader__item.active
+            +loader-1-svg
+          li.loader__item
+            +loader-2-svg
+          li.loader__item
+            +loader-3-svg
+          li.loader__item
+            +loader-4-svg
+          li.loader__item
+            +loader-5-svg
+          li.loader__item
+            +loader-6-svg
 
 block content 
   -
@@ -69,20 +81,20 @@ block content
               |Узнать цену
         .hero__container 
           .aos-container(data-aos="new-animation" data-aos-offset='1' data-aos-duration="1200" data-aos-delay="800")
-            img.hero__img(src="assets/images/hero.jpg", alt="")
+            img.hero__img(src="assets/images/hero.webp", alt="")
           .hero__wrapper(data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" data-aos-easing="new-easing")
             +hero-svg.hero__svg
   section.section.section--black 
     .container 
       .row.row--default
-        .row__col
+        .row__col(data-aos="fade-up")
           .label.label--light 
             |[ключевые #[br] технологии]
         .row__col
           .technology
             .technology__grid 
               each item in ddata.technology
-                .technology__item
+                .technology__item(data-aos="fade-up")
                   .technology__row
                     .technology__col
                       .technology__num
@@ -95,7 +107,7 @@ block content
   section.section.section--black.section--bot 
     .container 
       .row 
-        .row__col
+        .row__col(data-aos="fade-up")
           .label.label--light 
             |[В чем поможем]
         .row__col
@@ -108,7 +120,7 @@ block content
             .services
               .services__grid 
                 each item in ddata.services
-                  .services__item 
+                  .services__item(data-aos="fade-up") 
                     .services__icon 
                       +plus-svg.services__svg
                     p.services__text
@@ -116,15 +128,15 @@ block content
   section.section
     .container 
       .row
-        .row__col
+        .row__col(data-aos="fade-up")
           .label 
             |[особенности]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title 
             |с нами удобно
       .section__block
         .features 
-          .features__item 
+          .features__item(data-aos="fade-up") 
             .features__container 
               .features__icon 
                 +features-1-svg.features__svg
@@ -133,7 +145,7 @@ block content
                   |{Скорость}
                 p.features__text 
                   |Выведем команду на ваш проект в течении 3-х рабочих дней
-          .features__item 
+          .features__item(data-aos="fade-up")
             .features__container 
               .features__icon 
                 +features-2-svg.features__svg
@@ -142,7 +154,7 @@ block content
                   |{Гибкость}
                 p.features__text 
                   |Предоставим подменного специалиста на случай отпуска или болезни кого-то из команды
-          .features__item 
+          .features__item(data-aos="fade-up")
             .features__container 
               .features__icon 
                 +features-3-svg.features__svg
@@ -151,7 +163,7 @@ block content
                   |{Стоимость}
                 p.features__text 
                   |Уменьшим стоимость часа работы в зависимости от количества выработанных часов
-          .features__item 
+          .features__item(data-aos="fade-up")
             .features__container 
               .features__icon 
                 +features-4-svg.features__svg
@@ -163,10 +175,10 @@ block content
   section.section.section--bot 
     .container
       .row
-        .row__col
+        .row__col(data-aos="fade-up")
           .label 
             |[компетенции]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title 
             |наша специализация
       .specialization
@@ -178,24 +190,24 @@ block content
                 .specialization__col
                   ul.specialization__list
                     each item in ddata.specialization.first 
-                      li.specialization__item 
+                      li.specialization__item(data-aos="fade-up")
                         |#{item}
                 .specialization__col
                   ul.specialization__list
                     each item in ddata.specialization.second 
-                      li.specialization__item 
+                      li.specialization__item(data-aos="fade-up")
                         |#{item}
         .section__block
-          .specialization__bot
+          .specialization__bot(data-aos="fade-up")
             .label
               |[ А так же готовы осваивать #[br] новые для нас сферы ]
   section.section.section--black.section--bot 
     .container 
       .row 
-        .row__col
+        .row__col(data-aos="fade-up")
           .label.label--light 
             |[тарифЫ]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title.title--light 
             |выберите формат работы
       .section__block 
@@ -203,7 +215,7 @@ block content
           .row__col
           .row__col
             .rates 
-              .rates__card
+              .rates__card(data-aos="fade-up")
                 .rates__icon 
                   +rates-1-svg.rates__svg
                 .rates__tariff 
@@ -228,7 +240,7 @@ block content
                 .rates__bottom 
                   .rates__description 
                     |первые 10 часов — 700₽/час
-              .rates__card.rates__card--light
+              .rates__card.rates__card--light(data-aos="fade-up")
                 .rates__icon 
                   +rates-2-svg.rates__svg
                 .rates__tariff 
@@ -253,7 +265,7 @@ block content
                 .rates__bottom 
                   .rates__description 
                     |первые 10 часов — 600₽/час
-              .rates__card
+              .rates__card(data-aos="fade-up")
                 .rates__icon 
                   +rates-3-svg.rates__svg
                 .rates__tariff 
@@ -281,10 +293,10 @@ block content
   section.section
     .container 
       .row 
-        .row__col
+        .row__col(data-aos="fade-up")
           .label 
             |[вопросы]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title 
             |faq
       .section__block 
@@ -294,7 +306,7 @@ block content
             .faq 
               ul.faq__list
                 each item in ddata.faq
-                  li.faq__item
+                  li.faq__item(data-aos="fade-up")
                     .faq__accordion(data-accordion='')
                       .faq__head(data-accordion-button='')
                         h2.faq__title 
@@ -307,10 +319,10 @@ block content
   section.section
     .container
       .row 
-        .row__col
+        .row__col(data-aos="fade-up")
           .label 
             |[процесс]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title 
             |как это работает?
       .section__block 
@@ -319,7 +331,7 @@ block content
           .row__col
             .process
               ul.process__list 
-                li.process__item 
+                li.process__item(data-aos="fade-up")
                   .process__col
                     .process__icon
                       +process-1-svg.process__svg
@@ -328,7 +340,7 @@ block content
                       |{Договор}
                     p.process__text 
                       |Мы с вами заключаем договор, в котором указываем стоимость часа команды
-                li.process__item 
+                li.process__item(data-aos="fade-up")
                   .process__col
                     .process__icon
                       +process-2-svg.process__svg
@@ -337,7 +349,7 @@ block content
                       |{Старт}
                     p.process__text 
                       |Первые 10 часов, в зависимости от общей выработки за месяц, идут по значительно сниженной стоимости
-                li.process__item 
+                li.process__item(data-aos="fade-up")
                   .process__col
                     .process__icon
                       +process-3-svg.process__svg
@@ -346,7 +358,7 @@ block content
                       |{Процесс}
                     p.process__text 
                       |Работать мы можем как на вашем, так и на нашем сервере
-                li.process__item 
+                li.process__item(data-aos="fade-up")
                   .process__col
                     .process__icon
                       +process-4-svg.process__svg
@@ -358,24 +370,38 @@ block content
   section.section.section--bot 
     .container 
       .row 
-        .row__col
+        .row__col(data-aos="fade-up")
           .label  
             |[портфоило]
-        .row__col
+        .row__col(data-aos="fade-up")
           .title 
             |отзывы и клиенты
       .section__block
         .reviews
           .reviews__container
-            each item in ddata.reviews.first
-              .reviews__item 
-                img.reviews__img(src=`assets/images/${item}.png`, alt="")
+            .reviews__item(data-aos="fade-up")
+              +huawei-svg
+            .reviews__item(data-aos="fade-up")
+              +google-svg
+            .reviews__item(data-aos="fade-up")
+              +redbull-svg
+            .reviews__item(data-aos="fade-up")
+              +tesla-svg
+            .reviews__item(data-aos="fade-up")
+              +cola-svg
           .reviews__container
-            each item in ddata.reviews.second
-              .reviews__item 
-                img.reviews__img(src=`assets/images/${item}.png`, alt="")
+            .reviews__item(data-aos="fade-up")
+              +gazprom-svg
+            .reviews__item(data-aos="fade-up")
+              +shell-svg
+            .reviews__item(data-aos="fade-up")
+              +cisco-svg
+            .reviews__item(data-aos="fade-up")
+              +uber-svg
+            .reviews__item(data-aos="fade-up")
+              +ups-svg
       .section__block
-        .slider
+        .slider(data-aos="fade-up")
           .slider-buttons
             .slider-buttons__item   
               button.slider-buttons__button(data-slider-button = '2')

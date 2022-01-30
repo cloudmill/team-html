@@ -10,7 +10,7 @@
   overflow: hidden;
   background: var(--color-secondary);
   transition: height 1s cubic-bezier(0.42, 0, 0.58, 1);
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 
   &.hidden {
     height: 0;
@@ -34,5 +34,13 @@
   &__bot {
     display: flex;
     justify-content: flex-end;
+  }
+
+  &__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 }
